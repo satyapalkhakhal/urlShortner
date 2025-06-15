@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Stats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .stats {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>URL Statistics</h1>
+  <div class="stats">
+    <p><strong>Original URL:</strong> <a href="<%= originalUrl %>" target="_blank"><%= originalUrl %></a></p>
+    <p><strong>Short URL:</strong> <a href="<%= shortUrl %>" target="_blank"><%= shortUrl %></a></p>
+    <p><strong>Clicks:</strong> <%= clicks %></p>
+    <p><strong>Created:</strong> <%= new Date(createdAt).toLocaleString() %></p>
+  </div>
+  <p><a href="/">Create another short URL</a></p>
+</body>
+</html>
